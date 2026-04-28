@@ -1,0 +1,6 @@
+name: pro5E
+environments:
+  default:
+    - environment.yml
+variables: {}
+commands: {}
