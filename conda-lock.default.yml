@@ -13,18 +13,18 @@
 version: 1
 metadata:
   content_hash:
+    osx-64: 7d3017ee11cabac2371c96daf24bfd4411f6167c5511ae19c9eabfe034162475
     win-64: ffb5a4c17ea3ba72a2a7ff909d178b4dcb7933f33983fb9512d5becf6c9a1f45
     linux-64: ebce2fe47ef8c678d57dca0853f722b194c4a945d4bbb10203d504cd1df75c49
-    osx-64: 7d3017ee11cabac2371c96daf24bfd4411f6167c5511ae19c9eabfe034162475
   channels:
   - url: defaults
     used_env_vars: []
   platforms:
+  - osx-64
   - win-64
   - linux-64
-  - osx-64
   sources:
   - environment.yml
   time_metadata:
-    created_at: '2026-04-28T12:15:31Z'
+    created_at: '2026-05-01T12:35:46Z'
 package: []

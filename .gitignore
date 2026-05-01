@@ -309,3 +309,7 @@ http-client.private.env.json
 
 #Condarc file from conda
 .condarc
+
+# Additional ignores to .idea
+.idea/workspace.xml
+.idea/tasks.xml
