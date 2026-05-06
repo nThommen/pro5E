@@ -1,9 +1,3 @@
-import pandapower
-import pandapower.networks
-import pandapower.topology
-import pandapower.plotting
-import pandapower.converter
-import pandapower.estimation
-import pandapower.test
+import simbench.test
 
-pandapower.test.run_all_tests()
+simbench.test.run_all_tests()

@@ -154,6 +154,7 @@ dependencies:
       - scipy==1.16.3
       - setuptools==81.0.0
       - shapely==2.1.2
+      - simbench==1.6.2
       - six==1.17.0
       - structlog==25.5.0
       - texttable==1.7.0
