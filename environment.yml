@@ -152,6 +152,7 @@ dependencies:
       - python-dateutil==2.9.0.post0
       - pytz==2026.1.post1
       - scipy==1.16.3
+      - seaborn==0.13.2
       - setuptools==81.0.0
       - shapely==2.1.2
       - simbench==1.6.2
