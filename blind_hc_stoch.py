@@ -1,15 +1,14 @@
 import pandapower as pp
 import simbench as sb
 from pandapower.plotting.plotly import pf_res_plotly
-from numpy import random
-
+from numpy.random import default_rng
 
 """def get_simbench_codes():
     print(sb.collect_all_simbench_codes())
     return"""
 
 # Set the boundary conditions for the optimization problem and the max network parameters
-random.seed(42)  # For reproducibility
+rng = default_rng(seed=42)  # For reproducibility
 max_voltage = 1.3 # Maximum bus voltage in p.u.
 max_line_loading = 1.0 # Maximum line loading in p.u.
 max_transformer_loading = 1.0 # Maximum transformer loading in p.u.
@@ -61,19 +60,22 @@ pv_array = get_pv_array(planning_horizon, get_pv_number(net))
 
 # Number of iterations for the stochastic optimization
 iterations = 100
-
+"""
 # Distribute the PV systems randomly in the network for each year of the planning horizon and run power flow calculations
 for i in range(planning_horizon):
     print("Year: ", i + 1)
     for j in range(iterations):
-        print("Iteration: ", j + 1)
+        random_bus = rng.choice(net.bus.index)
         # Randomly distribute PV systems in the network
-        pp.create_random_pvs(net, pv_array[i], bus_type='bus')
+        pp.create_sgen(net, random_bus, p_mw=0.035, q_mvar=0.0)
+        print("Which bus: ", random_bus)
         # Run power flow calculation
-        pp.runpp(net)
+        #pp.runpp(net)
         # Check for network violations
-        check_violations(net)
+        #check_violations(net)
 
-"""pp.runpp(net)
-pf_res_plotly(net)"""
+"""
+pp.runpp(net)
+pf_res_plotly(net)
 
+print("Array of buses: ", net.bus.index)
