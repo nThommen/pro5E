@@ -11,9 +11,9 @@ rng = default_rng(0)
 
 def violations(net):
     runpp(net)
-    if net.res_line.loading_percent.max() > 50:
+    if net.res_line.loading_percent.max() > 100:
         return (True, "Line \n Overloading")
-    elif net.res_trafo.loading_percent.max() > 50:
+    elif net.res_trafo.loading_percent.max() > 75:
         return (True, "Transformer \n Overloading")
     elif net.res_bus.vm_pu.max() > 1.04:
         return (True, "Voltage \n Violation")

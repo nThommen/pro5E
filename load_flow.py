@@ -1,4 +1,6 @@
 import pandapower as pp
+from pandapower.plotting.plotly import pf_res_plotly
+
 # create empty net
 net = pp.create_empty_network()
 
@@ -16,4 +18,4 @@ pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", n
 pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")
 
 pp.runpp(net)
-pp.plotting.simple_plot(net, show_plot=True)
+pf_res_plotly(net)

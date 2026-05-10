@@ -399,3 +399,6 @@ Thumbs.db
 *.tmp
 *.temp
 ~$*
+
+# HTML-Output
+*.html
