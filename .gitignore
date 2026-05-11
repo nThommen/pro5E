@@ -402,3 +402,6 @@ Thumbs.db
 
 # HTML-Output
 *.html
+
+# results.csv generated for insight need not be committed
+results.csv
